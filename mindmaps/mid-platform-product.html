@@ -1,0 +1,397 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>中台产品</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+
+<style id="career-map-controls-style">
+body {
+  padding-top: 58px;
+  background: #f6f8fb;
+}
+#mindmap {
+  height: calc(100vh - 58px);
+  background: #fff;
+}
+.career-map-controls {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 10;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #dce3ee;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(25, 38, 58, 0.08);
+}
+.career-map-primary,
+.career-map-actions {
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.career-map-primary {
+  justify-content: flex-start;
+}
+.career-map-actions {
+  justify-content: flex-end;
+}
+.career-map-title {
+  min-width: 0;
+  margin-right: auto;
+  overflow: hidden;
+  color: #172033;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.career-map-controls button {
+  flex: 0 0 auto;
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid #c9d4e3;
+  border-radius: 6px;
+  background: #fff;
+  color: #243044;
+  font: 600 13px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  cursor: pointer;
+}
+.career-map-controls button[data-branch] {
+  border-color: #b8c4d6;
+}
+.career-map-controls button:hover {
+  border-color: #1f6feb;
+  color: #1f6feb;
+}
+.career-map-controls button.is-active {
+  border-color: #1f6feb;
+  background: #1f6feb;
+  color: #fff;
+}
+.career-map-inline-controls {
+  position: fixed;
+  z-index: 9;
+  display: flex;
+  gap: 8px;
+  transform: translate(-50%, -115%);
+  transition: left 220ms ease, top 220ms ease, opacity 180ms ease, transform 220ms ease;
+}
+.career-map-inline-controls[hidden] {
+  display: none;
+}
+.career-map-inline-controls button {
+  height: 34px;
+  padding: 0 14px;
+  border: 1px solid #1f6feb;
+  border-radius: 999px;
+  background: #1f6feb;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(31, 111, 235, 0.24);
+  font: 700 13px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  cursor: pointer;
+}
+.career-map-inline-controls button:hover {
+  background: #1158c7;
+}
+.career-map-inline-controls button[hidden] {
+  display: none;
+}
+@media (max-width: 720px) {
+  body {
+    padding-top: 108px;
+  }
+  #mindmap {
+    height: calc(100vh - 108px);
+  }
+  .career-map-controls {
+    flex-wrap: wrap;
+  }
+  .career-map-title {
+    flex: 0 0 100%;
+    margin-right: 0;
+  }
+  .career-map-primary,
+  .career-map-actions {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+  }
+  .career-map-controls button {
+    flex: 1 1 auto;
+  }
+}
+</style>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"&#x4f5c;&#x4e3a;&#x4e2d;&#x53f0;&#x4ea7;&#x54c1;&#xff0c;&#x6211;&#x505a;&#x7684;&#x4e8b;&#x60c5;","children":[{"content":"&#x5f85;&#x8865;&#x5145;","children":[{"content":"&#x4ea7;&#x54c1;&#x804c;&#x8d23;","children":[],"payload":{"tag":"li","lines":"4,5"}},{"content":"&#x9700;&#x6c42;&#x6d1e;&#x5bdf;","children":[],"payload":{"tag":"li","lines":"5,6"}},{"content":"&#x4ea7;&#x54c1;&#x65b9;&#x6848;","children":[],"payload":{"tag":"li","lines":"6,7"}},{"content":"&#x4ea7;&#x7814;&#x534f;&#x540c;","children":[],"payload":{"tag":"li","lines":"7,8"}},{"content":"&#x4e0a;&#x7ebf;&#x8fed;&#x4ee3;","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"&#x5178;&#x578b;&#x6848;&#x4f8b;","children":[],"payload":{"tag":"li","lines":"9,10"}}],"payload":{"tag":"h2","lines":"2,3"}}],"payload":{"tag":"h1","lines":"0,1"}},null)</script>
+
+<script id="career-map-controls-script">
+(() => {
+  const title = "中台产品";
+  const branchLevels = new Map();
+  let activeBranchIds = new Set();
+  let inlineControls;
+  let nextButton;
+  let collapseButton;
+
+  function walk(node, visit) {
+    if (!node) return;
+    visit(node);
+    (node.children || []).forEach((child) => walk(child, visit));
+  }
+
+  function textContent(node) {
+    const container = document.createElement('div');
+    container.innerHTML = node?.content || '';
+    return container.textContent.trim();
+  }
+
+  function rootNode() {
+    return window.mm?.state?.data || null;
+  }
+
+  function branches() {
+    return rootNode()?.children || [];
+  }
+
+  function maxRelativeLevel(root) {
+    let maxDepth = 1;
+    walk(root, (node) => {
+      maxDepth = Math.max(maxDepth, node.state?.depth || 1);
+    });
+    return Math.max(1, maxDepth - (root?.state?.depth || 1));
+  }
+
+  function selectedBranches() {
+    const ids = new Set([...activeBranchIds].map(String));
+    return branches().filter((branch) => ids.has(String(branch.state.id)));
+  }
+
+  function setActiveBranchMode(mode) {
+    const allBranches = branches();
+    if (mode === 'all') {
+      activeBranchIds = new Set(allBranches.map((branch) => String(branch.state.id)));
+    } else {
+      activeBranchIds = new Set([String(mode)]);
+    }
+
+    document.querySelectorAll('.career-map-controls button[data-branch]').forEach((button) => {
+      const id = button.dataset.branch;
+      button.classList.toggle('is-active', id !== 'all' && activeBranchIds.has(id));
+    });
+    document.querySelectorAll('.career-map-controls button[data-mode]').forEach((button) => {
+      button.classList.toggle('is-active', button.dataset.mode === 'all' && mode === 'all');
+    });
+
+    selectedBranches().forEach((branch) => {
+      branchLevels.set(String(branch.state.id), branchLevels.get(String(branch.state.id)) || 1);
+    });
+    positionInlineControls();
+  }
+
+  function applyBranchLevel(branch, level) {
+    const branchDepth = branch.state.depth;
+    branch.payload = { ...branch.payload, fold: 0 };
+    walk(branch, (node) => {
+      const hasChildren = Boolean(node.children && node.children.length);
+      const relativeDepth = node.state.depth - branchDepth;
+      const shouldFold = hasChildren && Number.isFinite(level) && relativeDepth >= level;
+      node.payload = { ...node.payload, fold: shouldFold ? 1 : 0 };
+    });
+    branchLevels.set(String(branch.state.id), Number.isFinite(level) ? level : maxRelativeLevel(branch));
+  }
+
+  async function showLevel(level, targetBranches = selectedBranches()) {
+    const mm = window.mm;
+    if (!mm?.state?.data || !targetBranches.length) return;
+    targetBranches.forEach((branch) => applyBranchLevel(branch, level));
+    await mm.renderData(mm.state.data);
+    await mm.fit();
+    positionInlineControls();
+  }
+
+  function hasNextLevel() {
+    return selectedBranches().some((branch) => {
+      const current = branchLevels.get(String(branch.state.id)) || 1;
+      return current < maxRelativeLevel(branch);
+    });
+  }
+
+  function hasPreviousLevel() {
+    return selectedBranches().some((branch) => (branchLevels.get(String(branch.state.id)) || 1) > 1);
+  }
+
+  function findAnchorNode() {
+    const targets = selectedBranches();
+    if (!targets.length) return null;
+    const targetLevel = Math.min(...targets.map((branch) => branchLevels.get(String(branch.state.id)) || 1));
+    const candidates = [];
+    targets.forEach((branch) => {
+      const branchDepth = branch.state.depth;
+      walk(branch, (node) => {
+        if (node.state.depth - branchDepth === targetLevel) candidates.push(node);
+      });
+    });
+    return candidates[Math.floor(candidates.length / 2)] || targets[0];
+  }
+
+  function positionInlineControls() {
+    if (!inlineControls) return;
+    const anchor = findAnchorNode();
+    const canExpand = hasNextLevel();
+    const canCollapse = hasPreviousLevel();
+    if (!anchor || (!canExpand && !canCollapse)) {
+      inlineControls.hidden = true;
+      return;
+    }
+    const element = window.mm.findElement(anchor)?.g;
+    if (!element) {
+      inlineControls.hidden = true;
+      return;
+    }
+    const rect = element.getBoundingClientRect();
+    inlineControls.hidden = false;
+    nextButton.hidden = false;
+    nextButton.textContent = '展开下一级';
+    nextButton.hidden = !canExpand;
+    collapseButton.hidden = !canCollapse;
+    inlineControls.style.left = rect.left + rect.width / 2 + 'px';
+    inlineControls.style.top = Math.max(64, rect.top - 8) + 'px';
+  }
+
+  async function expandNextLevel() {
+    const targets = selectedBranches();
+    if (!targets.length) return;
+    targets.forEach((branch) => {
+      const current = branchLevels.get(String(branch.state.id)) || 1;
+      applyBranchLevel(branch, Math.min(current + 1, maxRelativeLevel(branch)));
+    });
+    await window.mm.renderData(rootNode());
+    await window.mm.fit();
+    positionInlineControls();
+  }
+
+  async function collapsePreviousLevel() {
+    const targets = selectedBranches();
+    if (!targets.length) return;
+    targets.forEach((branch) => {
+      const current = branchLevels.get(String(branch.state.id)) || 1;
+      applyBranchLevel(branch, Math.max(1, current - 1));
+    });
+    await window.mm.renderData(rootNode());
+    await window.mm.fit();
+    positionInlineControls();
+  }
+
+  function mountControls() {
+    if (document.querySelector('.career-map-controls')) return;
+    const allBranches = branches();
+    const controls = document.createElement('div');
+    controls.className = 'career-map-controls';
+    controls.innerHTML = [
+      '<div class="career-map-title">中台产品</div>',
+      '<div class="career-map-primary">',
+      ...allBranches.map((branch) => '<button type="button" data-branch="' + branch.state.id + '">' + textContent(branch) + '</button>'),
+      '<button type="button" data-mode="all">全选</button>',
+      '</div>',
+      '<div class="career-map-actions">',
+      '<button type="button" data-action="expand-all">展开全部</button>',
+      '<button type="button" data-action="collapse">全部收起</button>',
+      '</div>',
+    ].join('');
+    document.body.prepend(controls);
+    inlineControls = document.createElement('div');
+    inlineControls.className = 'career-map-inline-controls';
+    inlineControls.hidden = true;
+    nextButton = document.createElement('button');
+    nextButton.type = 'button';
+    nextButton.textContent = '展开下一级';
+    nextButton.addEventListener('click', expandNextLevel);
+    collapseButton = document.createElement('button');
+    collapseButton.type = 'button';
+    collapseButton.textContent = '收起';
+    collapseButton.addEventListener('click', collapsePreviousLevel);
+    inlineControls.append(nextButton, collapseButton);
+    document.body.append(inlineControls);
+
+    controls.addEventListener('click', (event) => {
+      const button = event.target.closest('button');
+      if (!button) return;
+      if (button.dataset.branch) {
+        setActiveBranchMode(button.dataset.branch);
+        return;
+      }
+      if (button.dataset.mode === 'all') {
+        setActiveBranchMode('all');
+        return;
+      }
+      if (button.dataset.action === 'collapse') {
+        showLevel(1);
+        return;
+      }
+      if (button.dataset.action === 'expand-all') {
+        showLevel(Infinity);
+        return;
+      }
+    });
+    window.addEventListener('resize', positionInlineControls);
+    if (allBranches[0]) setActiveBranchMode(allBranches[0].state.id);
+    showLevel(1, allBranches);
+  }
+
+  if (window.mm) {
+    mountControls();
+  } else {
+    window.addEventListener('load', mountControls, { once: true });
+  }
+})();
+</script>
+</body>
+</html>
